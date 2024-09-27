@@ -1,0 +1,32 @@
+# Ignore Maven and Gradle directories and files
+/target/
+/.mvn/
+.classpath
+.project
+.settings/
+.idea/
+*.iml
+
+# Logs
+*.log
+/logs/
+
+# Spring Boot specific
+/bin/
+/build/
+/out/
+
+# IntelliJ
+.idea/
+*.iml
+*.iws
+
+# Eclipse
+.project
+.classpath
+.settings/
+*.jmx
+
+# OS generated files
+.DS_Store
+Thumbs.db
