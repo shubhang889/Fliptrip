@@ -1,5 +1,6 @@
 
-Description
+Description:
+
 We are required to build an app that lets customers search for and book flights. An airline can login to the portal and declare their flight schedule for the given day. Customers can search for flights between two cities. For simplicity you can assume that the airlines declare the schedule for a particular day and customers also book for the same day.
 1. The airlines are naturally competitive and there can be multiple flights from City A to City B, often with different prices.
 2. Due to logistical constraints, not all airlines may have an available flight between a pair of cities.
@@ -11,26 +12,39 @@ Data:
 
 Initial Input
 A set of lines in this format:
+
 AirlineName 	SourceCity 	DestinationCity 	Price
+
 JetAir		DEL		BLR			500
 
 Problems
 Customers will input source and destination city; implement the feature which prints the following:
 1. Minimum Number of Hops: Example output for DEL to NYC can look like DEL to LON via Delta for 2000
+
 LON to NYC via Delta for 2000
+
 Total Flights=2
+
 Total Cost 4000
+
 If there are multiple options with the same source and destination and each option has the same number of hops then you should return the one which has the minimum cost.
 
 2. Cheapest Flight: Example output for DEL to NYC can look like
+
 DEL to BLR via JetAir for 500
+
 BLR to LON via JetAir for 1000 
+
 LON to NYC via Delta for 2000
 
 Total Flights=3
+
 Total Cost
+
 3500
+
 Here the total cost (3500) is the lowest possible cost for the trip amongst all airlines and route options.
+
 If there are multiple options with the same source and destination and each option has the same cost then you should return the one which has the minimum number of hops.
 
 3. Filter for Search: Assume that all IndiGo flights serve meals.
@@ -70,17 +84,29 @@ i: input
 0: output
 i:register flight-> JetAir -> DEL -> BLR -> 500
 0: JetAir DEL -> BLR flight registered
+
 i:register flight-> JetAir -> BLR -> LON -> 1000 0: JetAir BLR -> LON flight registered
+
 i:register flight-> Delta -> DEL -> LON -> 2000 0: Delta DEL -> LON flight registered
+
 i:register flight-> Delta -> LON -> NYC -> 2000 o: Delta LON -> NYC flight registered
+
 i: register flight-> IndiGo -> LON-> NYC -> 2500 o: Indigo LON -> NYC flight registered
+
 i:register flight-> IndiGo -> DEL -> BLR -> 600 o: IndiGo DEL -> BLR flight registered
+
 i:register flight-> IndiGo -> BLR -> PAR -> 800 o: IndiGo BLR -> PAR flight registered
+
 i:register flight-> IndiGo -> PAR -> LON -> 300 o: IndiGo PAR -> LON flight registered
+
 i: search flight-> DEL -> NYC
+
 0:
+
 *Route with Minimum Hops:
+
 DEL to LON via Delta for 2000 LON to NYC via Delta for 2000
+
 Total Flights = 2 Total Cost = 4000
 
 
@@ -90,13 +116,14 @@ Total Flights = 3
 Total Cost = 3500
 
 i:search flight-> DEL -> NYC -> TRUE
+
 0:
 *Route with Minimum Hops:
 DEL to BLR via Indigo for 600 
 BLR to PAR via Indigo for 800
 PAR to LON via Indigo for 300 
 LON to NYC via Indigo for 2500
-Total Flights = 4 Total Cost = 4200
+Total Flights = 4 Total Cost = 42002
 
 * Cheapest Route:
 DEL to BLR via Indigo for 600 
