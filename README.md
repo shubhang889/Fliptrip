@@ -91,3 +91,12 @@ LON to NYC via Delta for 2000
 Total Flights = 3
 Total Cost = 3500
 ```   
+## 🔍 Key Takeaways
+
+This project was built under a strict 90-minute timed machine coding round as part of the Flipkart interview process. It emphasizes:
+  - Writing scalable and modular code under time pressure
+  - Applying real-world design principles (interface-driven, SOLID)
+  - Building systems that are extensible and easy to demo
+
+## 📎 Link to the article:
+🔗 [My Flipkart SDE-II Interview Journey](https://medium.com/@shbhggrwl/my-flipkart-sde-ii-interview-journey-process-timeline-key-takeaways-278a4b624999)
