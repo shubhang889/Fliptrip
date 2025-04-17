@@ -60,3 +60,34 @@ Uses graph-based traversal to find routes between cities.
 ```bash
 git clone https://github.com/shubhang889/Fliptrip.git
 cd Fliptrip
+```
+2. Compile and run the MainDriver class (any Java IDE or terminal):
+
+Sample Commands
+```bash
+register flight-> JetAir -> DEL -> BLR -> 500
+register flight-> JetAir -> BLR -> LON -> 1000
+register flight-> Delta -> DEL -> LON -> 2000
+register flight-> Delta -> LON -> NYC -> 2000
+register flight-> IndiGo -> DEL -> BLR -> 600
+register flight-> IndiGo -> BLR -> PAR -> 800
+register flight-> IndiGo -> PAR -> LON -> 300
+register flight-> IndiGo -> LON -> NYC -> 2500
+
+search flight-> DEL -> NYC
+```
+Output:
+```bash
+*Route with Minimum Hops:
+DEL to LON via Delta for 2000
+LON to NYC via Delta for 2000
+Total Flights = 2
+Total Cost = 4000
+
+Cheapest Route:
+DEL to BLR via JetAir for 500
+BLR to LON via JetAir for 1000
+LON to NYC via Delta for 2000
+Total Flights = 3
+Total Cost = 3500
+```   
